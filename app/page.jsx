@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import PostCard from "@/components/PostCard"
+import AlertComponent from "../components/AlertComponent"
 
 // Dados de exemplo movidos para fora do useEffect para evitar recriação desnecessária
 const samplePosts = [
@@ -72,6 +73,9 @@ export default function Home() {
 
   return (
     <div className="montserrat-regular">
+      <AlertComponent>
+        
+      </AlertComponent>
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
