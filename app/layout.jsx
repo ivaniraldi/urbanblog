@@ -80,7 +80,7 @@ export default function RootLayout({ children }) {
         <meta name="twitter:description" content={metadata.description} />
         <meta name="twitter:image" content={metadata.openGraph.images[0].url} />
       </head>
-      <body className={`${inter.className} bg-dark text-white min-h-screen`}>
+      <body className={`${inter.variable} bg-dark text-white min-h-screen`}>
         <div className="graffiti-bg"></div>
         <Navbar />
         <AnimatePresence mode="wait">
