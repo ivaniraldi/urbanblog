@@ -23,11 +23,11 @@ export const metadata = {
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://urbanblog.com", // Substitua pelo seu domínio real
+    url: "https://urbanbloghttps://urbanblog.onrender.com", // Substitua pelo seu domínio real
     siteName: "UrbanBlog",
     images: [
       {
-        url: "https://i.imgur.com/OaNNORy.png", // URL do logo ou imagem representativa
+        url: "https://i.imgur.com/qiBCPxn.png", // URL do logo ou imagem representativa
         width: 1200,
         height: 630,
         alt: "UrbanBlog - Arte Urbana e Cultura de Rua",
@@ -35,9 +35,9 @@ export const metadata = {
     ],
   },
   twitter: {
-    card: "summary_large_image",
+    card: "https://i.imgur.com/qiBCPxn.png",
     site: "@urbanblog", // Substitua pelo seu handle real do Twitter
-    creator: "@urbanblog",
+    creator: "@ewebrush",
   },
   robots: "index, follow",
 }
@@ -46,10 +46,10 @@ export default function RootLayout({ children }) {
   // Mapa de favicons por URL
   const faviconMap = {
     "/": "/favicon.ico", // Favicon padrão para a página inicial
-    "/tops": "/favicon-tops.ico",
-    "/about": "/favicon-about.ico",
-    "/contact": "/favicon-contact.ico",
-    "/post": "/favicon-post.ico",
+    "/tops": "/favicon.ico",
+    "/about": "/favicon.ico",
+    "/contact": "/favicon.ico",
+    "/post": "/favicon.ico",
   }
 
   // Função para determinar o favicon baseado no caminho (simulada para Server Component)
