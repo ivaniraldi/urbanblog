@@ -46,16 +46,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="pt-BR" className={`${inter.variable}`}>
       <head>
-  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-  {/* Si el favicon local no carga, usa la URL alternativa como respaldo */}
+
   <link
     rel="icon"
     href="https://i.imgur.com/2l6YmZB.png"
     type="image/png"
-    onError={(e) => {
-      e.target.onerror = null; // Evita bucles infinitos
-      e.target.href = "https://i.imgur.com/2l6YmZB.png"; // Forzar la carga de la imagen alternativa
-    }}
   />
   {/* Resto de las metaetiquetas */}
   <meta charSet="UTF-8" />
