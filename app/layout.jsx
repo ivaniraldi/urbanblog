@@ -46,7 +46,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="pt-BR" className={`${inter.variable}`}>
       <head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        {/* Ensure the favicon path is correct and accessible */}
         {/* Título base (substituído por metadata.title) */}
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
