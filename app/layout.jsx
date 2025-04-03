@@ -43,34 +43,13 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
-  // Mapa de favicons por URL
-  const faviconMap = {
-    "/": "/favicon.ico", // Favicon padrão para a página inicial
-    "/tops": "/favicon.ico",
-    "/about": "/favicon.ico",
-    "/contact": "/favicon.ico",
-    "/post": "/favicon.ico",
-  }
-
-  // Função para determinar o favicon baseado no caminho (simulada para Server Component)
-  const getFavicon = (path) => {
-    for (const key in faviconMap) {
-      if (path.startsWith(key)) return faviconMap[key]
-    }
-    return faviconMap["/"] // Default
-  }
-
-  // Como é um Server Component, o favicon será estático por página no build
-  const faviconPath = getFavicon("/"); // Ajuste dinâmico pode exigir Client Component ou geração estática
-
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" className={`${inter.variable}`}>
       <head>
+        <link rel="icon" href="/favicon.ico" />
         {/* Título base (substituído por metadata.title) */}
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        {/* Favicon dinâmico por URL */}
-        <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
         {/* Preconnect para fontes */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
